@@ -1,7 +1,7 @@
 %define oname	sK1
 
 %define rel	1
-%define svn	422
+%define svn	424
 %if %svn
 %define release		%mkrel 0.%svn.%rel
 %define distname	%name-%svn.tar.lzma
@@ -17,8 +17,6 @@ Summary:	Advanced vector graphics editor
 Version:	0.9.0
 Release:	%release
 Source0:	http://sk1project.org/downloads/%{oname}/%{distname}
-# From ALT: fixes installation of needed modules - AdamW 2008/05
-Patch0:		sk1-0.9.0-modules.patch
 Group:		Graphics
 BuildRequires:	X11-devel
 BuildRequires:	tcl
@@ -50,7 +48,6 @@ user interface.
 
 %prep
 %setup -q -n %{dirname}
-%patch0 -p0 -b .modules
 
 %build
 %{__python} ./setup.py build
