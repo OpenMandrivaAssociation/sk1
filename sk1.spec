@@ -30,6 +30,7 @@ BuildRequires:	python-devel
 BuildRequires:	freetype2-devel
 BuildRequires:	cairo-devel
 BuildRequires:	libxext-devel
+BuildRequires:	lcms-devel
 License:	GPLv2+ and LGPLv2+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:	tkinter
