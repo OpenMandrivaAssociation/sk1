@@ -1,8 +1,9 @@
 %define oname	sK1
 
 %define rel	1
-%define svn	511
+%define svn	601
 %if %svn
+# https://sk1.svn.sourceforge.net/svnroot/sk1/trunk/sK1
 %define release		%mkrel 0.%svn.%rel
 %define distname	%name-%svn.tar.lzma
 %define dirname		%oname
@@ -15,8 +16,10 @@
 Name:		sk1
 Summary:	Advanced vector graphics editor
 Version:	0.9.0
-Release:	%release
+Release:	%{release}
 Source0:	http://sk1project.org/downloads/%{oname}/%{distname}
+# Fix / kludge for Tcl 8.6 (good old interp->result) - AdamW 2008/12
+Patch0:		sk1-601-tcl86.patch
 Group:		Graphics
 BuildRequires:	X11-devel
 BuildRequires:	tcl
@@ -48,6 +51,9 @@ user interface.
 
 %prep
 %setup -q -n %{dirname}
+%patch0 -p1 -b .tcl86
+sed -i -e 's,tcl8.5,tcl%{tcl_version},g' setup.py
+sed -i -e 's,tk8.5,tk%{tcl_version},g' setup.py
 
 %build
 %{__python} ./setup.py build
