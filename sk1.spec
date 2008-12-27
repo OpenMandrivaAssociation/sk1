@@ -1,6 +1,6 @@
 %define oname	sK1
 
-%define rel	1
+%define rel	2
 %define svn	601
 %if %svn
 # https://sk1.svn.sourceforge.net/svnroot/sk1/trunk/sK1
