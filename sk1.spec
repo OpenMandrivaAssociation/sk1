@@ -1,7 +1,7 @@
 %define oname	sK1
 
-%define rel	2
-%define svn	601
+%define rel	1
+%define svn	737
 %if %svn
 # https://sk1.svn.sourceforge.net/svnroot/sk1/trunk/sK1
 %define release		%mkrel 0.%svn.%rel
@@ -15,7 +15,7 @@
 
 Name:		sk1
 Summary:	Advanced vector graphics editor
-Version:	0.9.0
+Version:	0.9.1
 Release:	%{release}
 Source0:	http://sk1project.org/downloads/%{oname}/%{distname}
 # Fix / kludge for Tcl 8.6 (good old interp->result) - AdamW 2008/12
@@ -104,6 +104,6 @@ rm -fr %{buildroot}
 %defattr(-,root,root)
 %{py_platsitedir}/%{name}
 %{_bindir}/%{name}
-%{py_platsitedir}/%{oname}-%{version}-py%{pyver}.egg-info
+%{py_platsitedir}/%{oname}-%{version}pre-py%{pyver}.egg-info
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
