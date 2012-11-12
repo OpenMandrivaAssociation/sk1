@@ -1,0 +1,18 @@
+--- sK1/src/extentions/pax/paxmodule.c	2008-09-12 11:54:38.000000000 -0700
++++ sK1/src/extentions/pax/paxmodule.c.new	2008-12-03 17:48:12.000000000 -0800
+@@ -1,3 +1,5 @@
++#define USE_INTERP_RESULT
++
+ #include <stdio.h>
+ #include <string.h>
+ 
+--- sK1/src/extentions/paxtkinter/paxtkinter.c	2008-09-12 11:54:38.000000000 -0700
++++ sK1/src/extentions/paxtkinter/paxtkinter.c.new	2008-12-03 17:52:46.000000000 -0800
+@@ -71,6 +71,7 @@
+ 
+ */
+ 
++#define USE_INTERP_RESULT
+ 
+ #include "Python.h"
+ #include <ctype.h>
