@@ -107,3 +107,50 @@ rm -fr %{buildroot}
 %{py_platsitedir}/%{oname}-%{version}pre-py%{pyver}.egg-info
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
+
+
+%changelog
+* Tue May 26 2009 Adam Williamson <awilliamson@mandriva.org> 0.9.1-0.737.1mdv2010.0
++ Revision: 379811
+- new snapshot (pretty much a 0.9.1 pre-release)
+
+* Sat Dec 27 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.601.2mdv2009.1
++ Revision: 319719
+- rebuild with python 2.6
+
+* Sat Dec 06 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.601.1mdv2009.1
++ Revision: 311035
+- buildrequires lcms-devel
+- rebuild for new tcl
+- a couple of fixes / kludges for tcl 8.6 issues
+- update to latest svn
+
+* Fri Sep 12 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.511.1mdv2009.0
++ Revision: 284341
+- drop font_sys.patch: merged upstream
+- new snapshot 511
+
+* Sat Aug 16 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.496.1mdv2009.0
++ Revision: 272510
+- new snapshot 496
+- add font_sys.patch (fixes a bug that breaks text entry)
+
+* Tue Jun 24 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.440.1mdv2009.0
++ Revision: 228770
+- drop modules_typo.patch (merged upstream)
+- new snapshot 440
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Thu May 29 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.424.1mdv2009.0
++ Revision: 213121
+- add modules_typo.patch: upstream nerfed up the fix for the last bug, fixing their fix...
+- drop modules.patch (merged upstream)
+- new snapshot 424
+
+* Wed May 28 2008 Adam Williamson <awilliamson@mandriva.org> 0.9.0-0.422.1mdv2009.0
++ Revision: 212159
+- import sk1
+
+
