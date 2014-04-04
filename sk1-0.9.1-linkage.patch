@@ -1,0 +1,12 @@
+diff -urN sK1/setup.py sK1-patched/setup.py
+--- sK1/setup.py	2009-05-26 18:37:01.000000000 +1100
++++ sK1-patched/setup.py	2014-04-05 02:44:44.592592910 +1100
+@@ -228,7 +228,7 @@
+ 						('MINOR_VERSION', '9')],
+ 			sources = [tkpng_src+'tkImgPNG.c', tkpng_src+'tkImgPNGInit.c'],
+ 			include_dirs = tcl_include_dirs,
+-			libraries=['tk8.5', 'tcl8.5', 'z'])
++			libraries=['m', 'tk8.5', 'tcl8.5', 'z'])
+ 
+ 			
+ 	setup (name = 'sK1',
