@@ -9,7 +9,7 @@ Version:	0.9.1
 Release:	0.%{svn}.2
 License:	GPLv2+ and LGPLv2+
 Group:		Graphics
-Url:		http://sk1project.org/
+Url:		https://sk1project.org/
 Source0:	http://sk1project.org/downloads/%{oname}/%{name}-%{svn}.tar.lzma
 # Fix / kludge for Tcl 8.6 (good old interp->result) - AdamW 2008/12
 Patch0:		sk1-601-tcl86.patch
